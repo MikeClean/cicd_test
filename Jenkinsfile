@@ -4,7 +4,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Здесь укажите ваш репозиторий с Dockerfile и конфигурацией Nginx
-                git 'https://github.com/MikeClean/cicd_test.git'
+                git branch: 'main', url: 'https://github.com/MikeClean/cicd_test.git'
             }
         }
         stage('Build Docker Image') {
